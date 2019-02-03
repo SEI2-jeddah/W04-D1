@@ -78,7 +78,7 @@ console.log(varVariable); // Uncaught ReferenceError: varVariable is not defined
 
 
 
-- Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- Read more about var vs let [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
 
 ### 3. Const
@@ -92,7 +92,7 @@ myFavoritePerson = "Mic"; // Error
 myFavoriteAlien = "Ghadeer"; // Good call
 ```
 
-- Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- Read more about const [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 ### 4. Arrow Functions
 
