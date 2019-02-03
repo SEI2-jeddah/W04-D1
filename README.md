@@ -53,8 +53,8 @@ var varVariable = "I think more than a variable"; // No issues
 ```
 
 ```js
-var letVariable = "I'm a let variable";
-var letVariable = "I think more than a variable"; // Uncaught SyntaxError: Identifier 'letVariable' has already been declared
+let letVariable = "I'm a let variable";
+let letVariable = "I think more than a variable"; // Uncaught SyntaxError: Identifier 'letVariable' has already been declared
 // letVariable <-- "I'm a let variable"
 ```
 
