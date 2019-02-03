@@ -8,19 +8,22 @@
 
 
 ## Agenda
-- Scope review
-- `Let` vs `Var` [[source](https://codeburst.io/difference-between-let-and-var-in-javascript-537410b2d707)]
-- `Const` [[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)]
-- Arrow (or fat) functions
+1. Scope review
+2. `Let` vs `Var` [[source](https://codeburst.io/difference-between-let-and-var-in-javascript-537410b2d707)]
+3. `Const` [[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)]
+4. Arrow (or fat) functions
 
 
+### 1. Scope review
+- See [slides](./slides/scope_review.pdf)
 
-### Let vs. Var
+
+### 2. Let vs. Var
 - `let` gives you the privilege to declare variables that are limited in scope to the block, statement of expression unlike `var`.
 
 - `var` is a keyword which defines a variable globally regardless of block scope.
 
-#### Block Scoping
+#### 2.1 Block Scoping
 - For loop using `let` variable
 
 ```js
@@ -40,7 +43,7 @@ for (var i = 0; i < 10; i++){
 ```
 
 
-#### Re-declaration
+#### 2.2 Re-declaration
 - `var` variables can be re-declared in the same scope but `let` variables can't be re-declared in the same scope.
 
 ```js
@@ -55,7 +58,7 @@ var letVariable = "I think more than a variable"; // Uncaught SyntaxError: Ident
 // letVariable <-- "I'm a let variable"
 ```
 
-#### Function Scoping
+#### 2.3 Function Scoping
 - `let` and `var` variables work the same way when in comes to function scoping
 
 ```js
@@ -78,7 +81,7 @@ console.log(varVariable); // Uncaught ReferenceError: varVariable is not defined
 - Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
 
-### Const
+### 3. Const
 - Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can't be re-declared.
 
 ```js
@@ -91,7 +94,7 @@ myFavoriteAlien = "Ghadeer"; // Good call
 
 - Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
-### Arrow Functions
+### 4. Arrow Functions
 
 #### But How?
 1. Convert regular function declarations to arrow function expressions 
