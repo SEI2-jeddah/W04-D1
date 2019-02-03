@@ -1,22 +1,94 @@
 # Advanced JS & ES2015
 
 
-## Agenda
-- Scope review
-- `Let` vs `Var`
-- `Const`
-- Arrow (or fat) functions
-- Object destructuring
-
 
 ![Yoda](https://i.pinimg.com/originals/58/d0/1e/58d01e4da34427555ea3b828731c3123.jpg)
 
 
+
+
+## Agenda
+- Scope review
+- `Let` vs `Var` [[source](https://codeburst.io/difference-between-let-and-var-in-javascript-537410b2d707)]
+- `Const` [[source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)]
+- Arrow (or fat) functions
+
+
+
 ### Let vs. Var
+- `let` gives you the privilege to declare variables that are limited in scope to the block, statement of expression unlike `var`.
+
+- `var` is a keyword which defines a variable globally regardless of block scope.
+
+#### Block Scoping
+- For loop using `let` variable
+
+```js
+for (let i = 0; i < 10; i++){
+  console.log(i); // i is visible thus is logged in the console as 0,1,2,....,9
+}
+  console.log(i); //throws an error as "i is not defined" because i is not visible
+```
+
+- For loop using `var` variable 
+  
+```js
+for (var i = 0; i < 10; i++){
+  console.log(i); // i is visible thus is logged in the console as 0,1,2,....,9
+}
+  console.log(i); //i is visible here too. thus is logged as 10.
+```
+
+
+#### Re-declaration
+- `var` variables can be re-declared in the same scope but `let` variables can't be re-declared in the same scope.
+
+```js
+var varVariable = "I'm a var variable";
+var varVariable = "I think more than a variable"; // No issues
+// varVariable <-- "I think more than a variable"
+```
+
+```js
+var letVariable = "I'm a let variable";
+var letVariable = "I think more than a variable"; // Uncaught SyntaxError: Identifier 'letVariable' has already been declared
+// letVariable <-- "I'm a let variable"
+```
+
+#### Function Scoping
+- `let` and `var` variables work the same way when in comes to function scoping
+
+```js
+function ohFunctionMyFunction(){
+    let letVariable = "I'm a let variable";
+    var varVariable = "I'm a var variable";
+    console.log(letVariable);
+    console.log(varVariable);
+}
+ohFunctionMyFunction()
+// <-- "I'm a let variable"
+// <-- "I'm a var variable"
+
+console.log(letVariable); // Uncaught ReferenceError: letVariable is not defined
+console.log(varVariable); // Uncaught ReferenceError: varVariable is not defined
+```
+
+
+
 - Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
 
 ### Const
+- Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can't be re-declared.
+
+```js
+const myFavoritePerson = "Usman";
+let myFavoriteAlien = "Moath";
+
+myFavoritePerson = "Mic"; // Error
+myFavoriteAlien = "Ghadeer"; // Good call
+```
+
 - Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 ### Arrow Functions
@@ -39,9 +111,9 @@ function divide(num1, num2) {
   return num1/num2;
 }
 
-function printMyName() {
-  let myName = 'Ghadeer';
-  console.log(myName);
+function whosTheBestIA() {
+  let iaName = 'Ghadeer';
+  console.log(iaName);
 }
 
 ```
@@ -55,9 +127,9 @@ const addFive = (num) => 5 + num;
 
 const divide = (num1, num2) => num1/num2;
 
-const printMyName = () => {
-  let myName = 'Ghadeer';
-  console.log(myName);
+const whosTheBestIA = () => {
+  let iaName = 'Ghadeer';
+  console.log(iaName);
 }
 ```
 - Read more about arrow functions [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
