@@ -137,6 +137,41 @@ const whosTheBestIA = () => {
 ```
 - Read more about arrow functions [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
+<br>
+
+#### YOU DO
+
+Refactor the following code to ES6. The console should return:
+
+![](https://i.imgur.com/nWeM10Z.png)
+
+<br>
+
+```
+var alwaysTrue = true;
+
+function myBarn(petMe) {
+ var that = this;
+  that.petMe=petMe;
+  var animals = {
+    petMe: petMe,
+  };
+  
+  if (alwaysTrue) {
+    var animals = {
+      petMe: "pig",
+    };
+    var greeting = 'This animal should be a pig; it is a: ' + animals.petMe + '.';
+    
+    console.log(greeting);
+  }
+  
+  console.log('This animal should be a dog; it is a: ' + animals.petMe);  // 2
+}
+
+myBarn("dog");
+```
+
 
 
 ## Resources
