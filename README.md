@@ -147,7 +147,7 @@ Refactor the following code to ES6. The console should return:
 
 <br>
 
-```
+```js
 var alwaysTrue = true;
 
 function myBarn(petMe) {
@@ -171,6 +171,37 @@ function myBarn(petMe) {
 
 myBarn("dog");
 ```
+
+<br>
+
+<details>
+  <summary>Solution</summary>
+
+```js
+const alwaysTrue = true;
+
+const myBarn = petMe => {
+ 
+  this.petMe=petMe;
+  let animals = {
+    petMe,
+  };
+  
+  if (alwaysTrue) {
+    let animals = {
+      petMe: "pig",
+    };
+    const greeting = thisOne => `This animal should be a pig; it is a: ${thisOne}.`;
+    console.log(greeting(animals.petMe));
+  }
+  
+  console.log('This animal should be a dog; it is a: ' + animals.petMe);
+}
+
+myBarn("dog");
+```
+<br>
+</details>
 
 
 
