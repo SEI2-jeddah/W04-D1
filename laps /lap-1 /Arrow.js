@@ -1,9 +1,8 @@
-//1 -  Create a function divide between two numbers 
+//1 -  Create a function divide between two numbers
+
 
 // 2 - Only get the numbers that are divisible by 3
 // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-
 
 
 // 3 -  Create a function called fullName
@@ -18,7 +17,7 @@
 // Use filter to return the names with the letter "a" in them
 // Use Arrow function
 // Use implicit return
- 
+
 
 
 // 5 - define a function By Arrow function 
