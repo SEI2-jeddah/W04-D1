@@ -1,6 +1,6 @@
-// // var global = "I'm a global variable";
+// var global = "I'm a global variable";
 
-// // function notSoGlobal() {
+// function notSoGlobal() {
 // //   var local = "I'm a local variable";
 // // }
 
@@ -13,22 +13,22 @@
 // // Create another localLocalFunction
 // // create a localLocalVariable
 
-// var globalVariable = "Global Scope";
-// var localVariable = "Local but global Scope";
+var globalVariable = "Global Scope";
+var localVariable = "Local but global Scope";
 
-// function localFunction() {
-//   localVariable = "Local Scope";
-//   function localLocalFunction() {
-//     var localLocalVariable = "Local Local Scope";
-//     // 1. What can I access from here?
-//   }
-//   // 2. What can I access from here?
-//   localLocalFunction();
-// }
+function localFunction() {
+  localVariable = "Local Scope";
+  function localLocalFunction() {
+    var localLocalVariable = "Local Local Scope";
+    // 1. What can I access from here?
+  }
+  // 2. What can I access from here?
+  localLocalFunction();
+}
 
-// // 3. What can I access from here?
-// localFunction();
-// console.log(localVariable);
+// 3. What can I access from here?
+localFunction();
+console.log(localVariable);
 
 
 
@@ -94,8 +94,8 @@
 // function foo() {
 //   var someVariable = "I'm random";
 // }
-console.log(someVariable);
-var someVariable = "I'm random";
+// console.log(someVariable);
+// var someVariable = "I'm random";
 
 
 // sayHi();
